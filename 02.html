@@ -12,7 +12,9 @@ Apresente para o usuário qual o número total de nomes longos encontrados.
    let listaDeNomesLongos = [];
    for (const nome of listaDeNomes) {
     if (nome.length > 5) {
-        
+        listaDeNomesLongos.push(nome);
     }
    }
+   //SAIDA
+   alert(`Ao todo, temos ${listaDeNomesLongos.length} nomes longos na lista.`);
 </script>

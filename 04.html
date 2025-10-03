@@ -5,5 +5,21 @@ Dado o Array [33, 5, 88, 12, 91, 25], peça para o usuário inserir um novo núm
 Depois, usando for...of, encontre qual é a quantidade de números ímpares presentes no Array.
 Apresente para o usuário a quantidade de números ímpares.
     */
-   
+   //ENTRADA
+   const listaNum = [33, 5, 88, 12, 91, 25];
+   let novoNum = parseInt(prompt(`Informe um novo número para ser adicionado à lista: `));
+   while (isNaN(novoNum)) {
+        alert(`INFORME UM NÚMERO VÁLIDO!!!`);
+        novoNum = parseInt(prompt(`Informe um novo número VÁLIDO para ser adicionado à lista: `));
+   }
+   //PROCESSAMENTO
+   listaNum.push(novoNum);
+   let numImpar = 0;
+   for (const num of listaNum) {
+        if (num % 2 == 1) {
+            numImpar++;
+        }
+   }
+   //SAIDA
+   alert(`Nesta lista, temos ${numImpar} números ímpares.`);
 </script>

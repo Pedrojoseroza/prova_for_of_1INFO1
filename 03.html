@@ -6,5 +6,19 @@ Peça ao usuário um percentual de desconto que será aplicado nos preços que e
 Usando for...of, calcule o preço total da compra, aplicando o desconto informado pelo usuário apenas nos produtos que custam mais de R$ 60,00.
 Apresente para o usuário qual será o valor final da compra.
     */
-   
+   const precosProdutos = [50.00, 15.50, 120.00, 80];
+   let desconto = parseFloat(prompt(`Informe um desconto em porcentagem para ser aplicado nos preços da lista de produtos:`));
+   while (desconto < 0 || desconto > 100 || isNaN(desconto)) {
+    alert(`Informe um desconto válido!!!`);
+    desconto = parseFloat(prompt(`Informe, novamente, um desconto em porcentagem para ser aplicado nos preços da lista de produtos: (Não digite %)`));
+   }
+   let subTotal = 0;
+   for (let preco of precosProdutos) {
+    if (preco > 60.00) {
+        preco -= preco * (desconto / 100);
+    }
+    subTotal += preco;
+   }
+   //SAIDA
+   alert(`O valor final da compra, após aplicação dos descontos, é de ${subTotal.toFixed(2)} reais.`);
 </script>
