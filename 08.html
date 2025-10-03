@@ -6,5 +6,20 @@ Peça para o usuário informar a sua própria idade e a insira no Array.
 Usando for...of, crie um novo array contendo apenas as idades que já atingiram a maioridade (18).
 Exiba a lista de idades acima de 18 anos.
     */
-   
+   let idades = [15, 17, 19, 52, 14, 25];
+   let idadeUsuario = parseInt(prompt(`Informe  a sua idade: `));
+   while(isNaN(idadeUsuario) || idadeUsuario <= 0) {
+    alert(`INFORME UM NÚMERO VÁLIDO!!!`);
+    idadeUsuario = parseInt(prompt(`Informe a sua idade novamente: `));
+   }
+   idades.push(idadeUsuario);
+   const idadesDeMaior = [];
+   //PROCESSAMENTO
+   for (const idade of idades) {
+    if (idade >= 18) {
+        idadesDeMaior.push(idade);
+    }
+   }
+   //SAÍDA
+   alert(`A lista de números de idades maiores de 18 anos são: ${idadesDeMaior.join(", ")}.`);
 </script>

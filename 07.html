@@ -8,4 +8,15 @@ Apresente para o usuário qual será o valor final da compra.
     */
    const contasAPagar = [50.00, 15.50, 120.00, 80];
    let juro = parseFloat(prompt(`Informe uma taxa de juros para ser aplicada nas contas a pagar: `));
+   while (isNaN(juro)) {
+    alert(`INFORME UMA TAXA DE JUROS VÁLIDA!!!`);
+    juro = parseFloat(prompt(`Informe uma taxa de juros VÁLIDA para ser aplicada nas contas a pagar: `));
+   }
+   //PROCESSAMENTO
+   let custoTotal = 0;
+   for (let preco of contasAPagar) {
+    custoTotal += preco + preco * (juro/100);
+   }
+   //SAÍDA
+   alert(`O custo final da compra é R$ ${custoTotal.toFixed(2)}.`);
 </script>
