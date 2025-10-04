@@ -8,7 +8,7 @@ Apresente para o usuário qual será o valor final da compra.
     */
    const contasAPagar = [50.00, 15.50, 120.00, 80];
    let juro = parseFloat(prompt(`Informe uma taxa de juros para ser aplicada nas contas a pagar: `));
-   while (isNaN(juro)) {
+   while (isNaN(juro) || juro < 0) {
     alert(`INFORME UMA TAXA DE JUROS VÁLIDA!!!`);
     juro = parseFloat(prompt(`Informe uma taxa de juros VÁLIDA para ser aplicada nas contas a pagar: `));
    }

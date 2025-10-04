@@ -6,7 +6,7 @@ Peça para o usuário para digitar uma letra.
 Usando for...of, crie um novo array contendo apenas as cidades da lista original que começam com a letra informada pelo usuário.
 Ao final, exiba o novo array com as cidades que atenderam a condição estabelecida.
     */
-   //ENTRADA
+    //ENTRADA
     const listaDeCidades = ["Recife", "Salvador", "Rio de Janeiro", "São Paulo", "Manaus"];
     let letra = prompt("Informe uma letra para filtrarmos as cidades de acordo com a primeira letra: ").trim().toUpperCase();
     let cidadesComAPrimeiraLetra = [];
@@ -16,7 +16,7 @@ Ao final, exiba o novo array com as cidades que atenderam a condição estabelec
     }
     //PROCESSAMENTO
     for (const cidade of listaDeCidades) {
-        if (cidade.indexOf(letra) === 0) {
+        if (cidade.charAt(0) === letra) {
             cidadesComAPrimeiraLetra.push(cidade);
         }
     }
@@ -24,6 +24,6 @@ Ao final, exiba o novo array com as cidades que atenderam a condição estabelec
     if (cidadesComAPrimeiraLetra.length <= 0) {
         alert("Não temos nenhuma cidade que começa com a letra informada!");
     } else {
-    alert(`As cidades que começam com a letra "${letra}", são: ${cidadesComAPrimeiraLetra.join(", ")}.`);
+        alert(`As cidades que começam com a letra "${letra}", são: ${cidadesComAPrimeiraLetra.join(", ")}.`);
     }
 </script>

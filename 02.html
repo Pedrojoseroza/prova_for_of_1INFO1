@@ -7,7 +7,7 @@ Em seguida, utilizando for...of, conte quantos nomes na lista possuem mais de 5 
 Apresente para o usuário qual o número total de nomes longos encontrados.
     */
    let listaDeNomes = ["Ana", "Carlos", "Beatriz", "Augusto", "Fernanda"];
-   const novoNome = prompt(`Informe um novo nome: `).trimRight().trimLeft();
+   const novoNome = prompt(`Informe um novo nome: `).trim();
    listaDeNomes.push(novoNome);
    let listaDeNomesLongos = [];
    for (const nome of listaDeNomes) {

@@ -6,6 +6,14 @@ listaDeCompras = ['pão', 'queijo', 'leite', 'suco'];
 Porém os produtos disponíveis no mercado são:
 const itensDisponiveis = ['maçã', 'pão', 'leite', 'manteiga', 'café'];
 Apresente para o usuário quais itens ele conseguirá comprar no mercado.
-    */
-   
+*/
+const itensDisponiveis = ['maçã', 'pão', 'leite', 'manteiga', 'café'];
+const listaDeCompras = ['pão', 'queijo', 'leite', 'suco'];
+const itensCompraveis = [];
+for (const item of listaDeCompras) {
+    if (itensDisponiveis.includes(item)) {
+        itensCompraveis.push(item);
+    }
+}
+alert(`Os itens disponíveis para serem comprados são: ${itensCompraveis}.`)
 </script>
