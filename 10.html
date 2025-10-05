@@ -7,7 +7,7 @@ Peça para o usuário inserir o seu próprio nome.
 Valide se o nome inserido pelo usuário consta na lista, retornando para o usuário se ele está cadastrado ou não.
 */
 const usuariosCadastrados = ['admin', 'julia', 'pedro', 'lucas'];
-const nomeUsuario = prompt(`Informe o seu nome: `).toLowerCase();
+const nomeUsuario = prompt(`Informe o seu nome: `).toLowerCase().trim();
 let isSubscribed = false;
 //PROCESSAMENTO 
 for (const nome of usuariosCadastrados) {
